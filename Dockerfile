@@ -29,4 +29,4 @@ RUN /sbin/ldconfig -v
 RUN wget http://www.solarus-games.org/downloads/games/zelda-roth-se/zelda-roth-se-1.2.1.solarus 
 
 # Add shorcut to desktop
-ADD /headless/ubuntu_icarius/desktop/solarus-icon.desktop /root/Desktop/solarus-icon.desktop
+ADD desktop/solarus-icon.desktop /root/Desktop/solarus-icon.desktop
