@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=/usr/local/bin/solarus-run /root/zelda-roth-se-1.2.1.solarus
+Name=Solarus
+Comment=Solarus
+Icon=/usr/share/icons/LoginIcons/apps/64/computer.svg
