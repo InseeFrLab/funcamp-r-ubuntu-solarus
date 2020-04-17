@@ -1,0 +1,24 @@
+stages :
+  - build-desktop
+  - build
+
+.build-generic: &build-generic
+  stage: build
+  tags:
+    - shell
+  script:
+    - cd $MODULE_NAME
+    - docker build --pull -t git-registry.lab.sspcloud.fr/$CI_PROJECT_NAMESPACE/ubuntu-$MODULE_NAME:$TAG .
+    - docker push git-registry.lab.sspcloud.fr/$CI_PROJECT_NAMESPACE/ubuntu-$MODULE_NAME:$TAG
+
+.build-master: &build-master
+  <<: *build-generic
+  only:
+    - master
+
+build-base:
+  <<: *build-master
+  stage: build-desktop
+  variables:
+    MODULE_NAME : "solarus"
+    TAG: "latest"
