@@ -1,4 +1,4 @@
-FROM dorowu/ubuntu-desktop-lxde-vnc
+FROM dorowu/ubuntu-desktop-lxde-vnc:bionic
 
 # Install build-essential, wget and nano
 RUN apt-get update -y && \
