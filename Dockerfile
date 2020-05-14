@@ -39,4 +39,5 @@ RUN mv /root/funcamp-r-icarius-master/data/icarius.solarus /root/icarius.solarus
     rm -r /root/solarus-release-1.6.3/ /root/solarus-release-1.6.3.tar.gz
 
 # Add shorcut to desktop
+ADD desktop/retro_game.png /usr/share/icons/LoginIcons/apps/64/retro_game.png
 ADD desktop/solarus-icon.desktop /root/Desktop/solarus-icon.desktop
