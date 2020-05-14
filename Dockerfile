@@ -3,7 +3,7 @@ FROM dorowu/ubuntu-desktop-lxde-vnc:bionic
 # Install build-essential, wget and nano
 RUN apt-get update -y && \
     apt-get install build-essential -y && \
-    apt-get install wget nano -y
+    apt-get install wget nano zip -y
     
 # Install related libraries and cmake
 RUN apt-get install -y libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libluajit-5.1-dev libphysfs-dev libopenal-dev libmodplug-dev libvorbis-dev qtbase5-dev qttools5-dev qttools5-dev-tools libglm-dev && \
