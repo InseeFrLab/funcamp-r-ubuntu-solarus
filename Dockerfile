@@ -25,8 +25,18 @@ WORKDIR /root/
 
 RUN /sbin/ldconfig -v
 
-# Download Game (to be changed with icaRius Game)
-RUN wget http://www.solarus-games.org/downloads/games/zelda-roth-se/zelda-roth-se-1.2.1.solarus 
+# Download icaRius Game source code
+RUN wget https://git.lab.sspcloud.fr/lxwgkb/funcamp-r-icarius/-/archive/master/funcamp-r-icarius-master.zip
+
+# Repackage icaRius Game in a solarus archive
+RUN unzip /root/funcamp-r-icarius-master.zip && \
+    cd /root/funcamp-r-icarius-master/data && \
+    zip -r icarius.solarus ./*
+
+# Clean data
+RUN mv /root/funcamp-r-icarius-master/data/icarius.solarus /root/icarius.solarus && \
+    rm -r /root/funcamp-r-icarius-master/ /root/funcamp-r-icarius-master.zip && \
+    rm -r /root/solarus-release-1.6.3/ /root/solarus-release-1.6.3.tar.gz
 
 # Add shorcut to desktop
 ADD desktop/solarus-icon.desktop /root/Desktop/solarus-icon.desktop
