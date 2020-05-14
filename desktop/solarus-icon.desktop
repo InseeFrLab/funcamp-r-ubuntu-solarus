@@ -5,4 +5,4 @@ Terminal=false
 Exec=/usr/local/bin/solarus-run /root/icarius.solarus
 Name=icaRius
 Comment=icaRius
-Icon=/usr/share/icons/LoginIcons/apps/64/computer.svg
+Icon=/usr/share/icons/LoginIcons/apps/64/retro_game.png
