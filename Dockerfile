@@ -26,7 +26,7 @@ WORKDIR /root/
 RUN /sbin/ldconfig -v
 
 # Download icaRius Game source code
-RUN wget https://git.lab.sspcloud.fr/lxwgkb/funcamp-r-icarius/-/archive/master/funcamp-r-icarius-master.zip
+RUN wget https://git.lab.sspcloud.fr/funcamp-r/funcamp-r-icarius/-/archive/master/funcamp-r-icarius-master.zip
 
 # Repackage icaRius Game in a solarus archive
 RUN unzip /root/funcamp-r-icarius-master.zip && \
